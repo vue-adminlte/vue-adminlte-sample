@@ -1,6 +1,6 @@
 <template>
   <li>
-    <a @click="onClick"
+    <a @click="onClick($event)"
        href="javascript:void(0)">
       <flex-panel align-items="center">
         <i v-if="icon"
@@ -39,8 +39,8 @@ export default {
     }
   },
   methods: {
-    onClick() {
-      this.$emit('click')
+    onClick(e) {
+      this.$emit('click',e)
     }
   }
 }
