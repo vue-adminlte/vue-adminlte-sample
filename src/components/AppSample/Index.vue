@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <app-header></app-header>
     <app-sidebar></app-sidebar>
     <lte-content-wrapper>

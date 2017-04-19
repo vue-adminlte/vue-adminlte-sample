@@ -6,7 +6,7 @@
                 class="close"
                 data-dismiss="alert"
                 aria-hidden="true">x</button>
-        <h4 v-show="isShowHeader"><i class="icon" :class="icon" v-show="isShowIcon"></i><span>{{header}}</span></h4>
+        <h4 v-show="isShowHeader"><i class="icon" :class="icon" v-show="icon"></i><span>{{header}}</span></h4>
         <i class="icon"
            :class="icon"
            v-show="!isShowHeader && isShowIcon"></i>
@@ -15,15 +15,14 @@
 </template>
 
 <script>
+import UiBase from './ui-base.js'
+
 export default {
+    extends: UiBase,
     computed: {
         typeClass() {
             if (!this.type) return ''
             return ['alert-' + this.type]
-        },
-        bgClass() {
-            if (!this.bg) return ''
-            return ['bg-' + this.bg]
         },
         isShowHeader() {
             if (this.header && this.header != '') {
@@ -31,32 +30,10 @@ export default {
             } else {
                 return false
             }
-        },
-        isShowIcon() {
-            if (this.icon && this.icon != '') {
-                return true
-            } else {
-                return false
-            }
-        },
-        isShowContentIcon() {
-            return !isShowIcon()
         }
     },
     props: {
-        type: {
-            type: String,
-            default: undefined
-        },
-        bg: {
-            type: String,
-            default: undefined
-        },
         header: {
-            type: String,
-            default: undefined
-        },
-        icon: {
             type: String,
             default: undefined
         },
