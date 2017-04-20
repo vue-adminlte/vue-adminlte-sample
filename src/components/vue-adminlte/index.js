@@ -60,9 +60,7 @@ const components = {
   LteToggle: require('./ToggleButton.vue'),
   LteTreeView: require('./TreeView.vue'),
   LteUserPanel: require('./UserPanel.vue'),
-  LteControlbarToggle: require('./ControlbarToggle.vue'),
-  FlexPanel: require('./FlexPanel.vue'),
-  FlexContainer: require('./FlexContainer.vue'),
+  LteControlbarToggle: require('./ControlbarToggle.vue')
 }
 
 export default {

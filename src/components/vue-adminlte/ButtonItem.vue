@@ -2,17 +2,18 @@
   <li>
     <a @click="onClick($event)"
        href="javascript:void(0)">
-      <flex-panel align-items="center">
+      <div style="display:flex;align-items:center">
         <i v-if="icon"
            :class="icon"
-           style="padding-right:5px"></i>
+           style="margin-right:5px"></i>
         <div style="flex:1">
           <slot></slot>
         </div>
         <small v-if="badgeText || badgeBg"
                class="label"
+               style="margin-left:5px"
                :class="[badgeBgClass]">{{badgeText}}</small>
-      </flex-panel>
+      </div>
     </a>
   </li>
 </template>

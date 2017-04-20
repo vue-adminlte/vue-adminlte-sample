@@ -1,12 +1,16 @@
 <template>
   <li>
     <router-link :to="to">
-      <i v-if="icon"
-         :class="icon"></i>
-      <span><slot></slot></span>
-      <small v-if="badgeText"
-             class="label pull-right"
-             :class="[badgeBgClass]">{{badgeText}}</small>
+      <div style="display:flex;align-items:center">
+        <i v-if="icon"
+           :class="icon"
+           style="margin-right:5px"></i>
+        <span style="flex:1"><slot></slot></span>
+        <small v-if="badgeText"
+               class="label"
+               style="margin-left:5px"
+               :class="[badgeBgClass]">{{badgeText}}</small>
+      </div>
     </router-link>
   </li>
 </template>

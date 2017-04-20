@@ -1,16 +1,9 @@
-<template>
-  <div :style="styleObject">
-    <slot></slot>
-  </div>
-</template>
-
-<script>
 import StyleCommon from './style-common.js'
 
 export default {
   extends: StyleCommon,
   computed: {
-    styleObject() {
+    styleFlex() {
       var temp = this.meregeObject({}, this.$props)
       temp.display = 'flex'
       temp.display = '-webkit-flex'
@@ -44,4 +37,3 @@ export default {
     }
   }
 }
-</script>

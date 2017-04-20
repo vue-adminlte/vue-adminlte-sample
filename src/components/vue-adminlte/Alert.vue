@@ -9,7 +9,7 @@
         <h4 v-if="header"><i class="icon" :class="icon" v-show="icon"></i><span>{{header}}</span><span style="margin-left:10px;" class="badge" :class="[badgeBgClass]">{{badgeText}}</span></h4>
         <i class="icon"
            :class="icon"
-           v-show="!isShowHeader && isShowIcon"></i>
+           v-if="icon && !header"></i>
         <slot></slot>
     </div>
 </template>

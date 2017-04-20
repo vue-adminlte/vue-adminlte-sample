@@ -10,10 +10,7 @@ export default {
     }
   },
   computed: {
-    styleObject() {
-      return commonStyle
-    },
-    commonStyle() {
+    styleCommon() {
       return this.meregeObject({}, this.$props)
     }
   },
@@ -50,7 +47,39 @@ export default {
       type: String,
       default: undefined
     },
+    marginTop: {
+      type: String,
+      default: undefined
+    },
+    marginLeft: {
+      type: String,
+      default: undefined
+    },
+    marginRight: {
+      type: String,
+      default: undefined
+    },
+    marginBottom: {
+      type: String,
+      default: undefined
+    },
     padding: {
+      type: String,
+      default: undefined
+    },
+    paddingLeft: {
+      type: String,
+      default: undefined
+    },
+    paddingTop: {
+      type: String,
+      default: undefined
+    },
+    paddingRight: {
+      type: String,
+      default: undefined
+    },
+    paddingBottom: {
       type: String,
       default: undefined
     },
@@ -79,6 +108,22 @@ export default {
       default: undefined
     },
     top: {
+      type: String,
+      default: undefined
+    },
+    right: {
+      type: String,
+      default: undefined
+    },
+    bottom: {
+      type: String,
+      default: undefined
+    },
+    float: {
+      type: String,
+      default: undefined
+    },
+    shadow: {
       type: String,
       default: undefined
     },

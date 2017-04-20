@@ -7,8 +7,10 @@ import store from './store'
 
 // use vue-adminlte
 import VueAdmin from './components/vue-adminlte'
+import VueFlexLayout from './components/vue-flexlayout'
 
 Vue.use(VueAdmin)
+Vue.use(VueFlexLayout)
 
 Vue.config.productionTip = false
 

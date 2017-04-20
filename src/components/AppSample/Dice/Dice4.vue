@@ -1,18 +1,14 @@
 <template>
   <!--4-->
   <flex-panel class="dice"
-              flex-direction="column">
-    <flex-panel justify-content="space-around"
-                align-items="center"
-                flex="1">
+              m-around>
+    <v-panel m-around>
       <flex-panel class="dice-point"></flex-panel>
       <flex-panel class="dice-point"></flex-panel>
-    </flex-panel>
-    <flex-panel justify-content="space-around"
-                align-items="center"
-                flex="1">
+    </v-panel>
+    <v-panel m-around>
       <flex-panel class="dice-point"></flex-panel>
       <flex-panel class="dice-point"></flex-panel>
-    </flex-panel>
+  </v-panel>
   </flex-panel>
 </template>
