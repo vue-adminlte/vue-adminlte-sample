@@ -18,29 +18,13 @@
 </template>
 
 <script>
+import UiBase from './ui-base.js'
+
 export default {
-  computed: {
-    badgeBgClass() {
-      return this.badgeBg ? `bg-${this.badgeBg}` : ''
-    }
-  },
-  props: {
-    icon: {
-      type: String,
-      default: null
-    },
-    badgeText: {
-      type: String,
-      default: undefined
-    },
-    badgeBg: {
-      type: String,
-      default: 'primary'
-    }
-  },
+  extends: UiBase,
   methods: {
     onClick(e) {
-      this.$emit('click',e)
+      this.$emit('click', e)
     }
   }
 }

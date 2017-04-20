@@ -1,43 +1,18 @@
 <template>
     <div class="callout"
-         :class="[variantClass, bgClass]">
-        <h4 v-show="isShowHeader">{{header}}</h4>
+         :class="[typeClass, bgClass]">
+        <h4 v-if="header"><i class="icon" :class="icon" v-show="icon"></i><span>{{header}}</span><span style="margin-left:10px;" class="badge" :class="[badgeBgClass]">{{badgeText}}</span></h4>
         <slot></slot>
     </div>
 </template>
 
 <script>
+import UiHeader from './ui-header.js'
+
 export default {
+    extends: UiHeader,
     computed: {
-        variantClass() {
-            if (!this.variant) return ''
-            return ['callout-' + this.variant]
-        },
-        bgClass() {
-            if (!this.bg) return ''
-            return ['bg-' + this.bg]
-        },
-        isShowHeader() {
-            if (this.header && this.header != '') {
-                return true
-            } else {
-                return false
-            }
-        }
-    },
-    props: {
-        variant: {
-            type: String,
-            default: ''
-        },
-        bg: {
-            type: String,
-            default: 'primary'
-        },
-        header: {
-            type: String,
-            default: ''
-        }
+        typeClass() { return `callout-${this.variant}` },
     }
 }
 </script>

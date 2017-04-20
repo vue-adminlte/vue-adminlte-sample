@@ -1,16 +1,16 @@
 <template>
-  <router-link :to="to"
+  <a :href="href"
      class="navbar-brand">
     <i v-if="icon"
        :class="icon"></i>
     <slot></slot>
-  </router-link>
+  </a>
 </template>
 
 <script>
 export default {
   props: {
-    to: {
+    href: {
       type: String,
       default: '/'
     },

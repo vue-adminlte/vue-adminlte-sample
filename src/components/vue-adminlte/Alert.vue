@@ -1,12 +1,12 @@
 <template>
     <div class="alert"
          :class="[typeClass, bgClass]">
-        <button v-show="dismissible"
+        <button v-show="closeable"
                 type="button"
                 class="close"
                 data-dismiss="alert"
                 aria-hidden="true">x</button>
-        <h4 v-show="isShowHeader"><i class="icon" :class="icon" v-show="icon"></i><span>{{header}}</span></h4>
+        <h4 v-if="header"><i class="icon" :class="icon" v-show="icon"></i><span>{{header}}</span><span style="margin-left:10px;" class="badge" :class="[badgeBgClass]">{{badgeText}}</span></h4>
         <i class="icon"
            :class="icon"
            v-show="!isShowHeader && isShowIcon"></i>
@@ -15,29 +15,18 @@
 </template>
 
 <script>
-import UiBase from './ui-base.js'
+import UiHeader from './ui-header.js'
 
 export default {
-    extends: UiBase,
+    extends: UiHeader,
     computed: {
         typeClass() {
             if (!this.type) return ''
             return ['alert-' + this.type]
-        },
-        isShowHeader() {
-            if (this.header && this.header != '') {
-                return true
-            } else {
-                return false
-            }
         }
     },
     props: {
-        header: {
-            type: String,
-            default: undefined
-        },
-        dismissible: {
+        closeable: {
             type: Boolean,
             default: false
         }

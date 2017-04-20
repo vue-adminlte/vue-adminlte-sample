@@ -21,7 +21,6 @@ const components = {
   LteCallout: require('./Callout.vue'),
   LteCarousel: require('./Carousel.vue'),
   LteCheck: require('./CheckBox.vue'),
-  LteCol: require('./Column.vue'),
   LteCombo: require('./ComboBox.vue'),
   LteContainer: require('./Container.vue'),
   LteCustomMenu: require('./CustomMenu.vue'),

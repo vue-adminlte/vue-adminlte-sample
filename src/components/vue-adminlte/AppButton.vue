@@ -1,6 +1,6 @@
 <template>
   <a class="btn btn-app"
-     @click="onClick">
+     @click="onClick($event)">
     <span class="badge"
           v-if="badgeText"
           :class="badgeBgClass">{{badgeText}}</span>
@@ -10,31 +10,19 @@
 </template>
 
 <script>
+import UiBase from './ui-base.js'
+
 export default {
-  computed: {
-    badgeBgClass() {
-      if (this.badgeBg) {
-        return `bg-${this.badgeBg}`
-      }
-    }
-  },
+  extends: UiBase,
   props: {
-    badgeBg: {
-      type: String,
-      default: undefined
-    },
-    badgeText: {
-      type: String,
-      default: ''
-    },
     icon: {
       type: String,
       default: 'fa fa-square-o'
     }
   },
   methods: {
-    onClick() {
-      this.$emit('click')
+    onClick(e) {
+      this.$emit('click', e)
     }
   }
 }

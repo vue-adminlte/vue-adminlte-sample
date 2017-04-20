@@ -3,6 +3,9 @@ export default {
     bgClass() {
       return this.bg ? `bg-${this.bg}` : ''
     },
+    badgeBgClass() {
+      return this.badgeBg ? `bg-${this.badgeBg}` : ''
+    }
   },
   props: {
     type: {
@@ -14,6 +17,14 @@ export default {
       default: undefined
     },
     icon: {
+      type: String,
+      default: undefined
+    },
+    badgeText: {
+      type: String,
+      default: undefined
+    },
+    badgeBg: {
       type: String,
       default: undefined
     }

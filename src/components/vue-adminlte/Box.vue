@@ -1,9 +1,9 @@
 <template>
   <div class="box"
-       :class="[variantClass,solidClass]">
+       :class="[typeClass,bgClass,solidClass]">
     <div class="box-header"
          :class="[borderClass]">
-      <h3 class="box-title"><i v-if="icon" :class="icon"></i> {{header}}</h3>
+      <h3 class="box-title"><i v-if="icon" :class="icon"></i> {{header}}<span style="margin-left:10px;" class="badge" :class="[badgeBgClass]">{{badgeText}}</span></h3>
       <div class="box-tools pull-right"
            v-show="expandable">
         <button type="button"
@@ -28,10 +28,13 @@
 </template>
 
 <script>
+import UiHeader from './ui-header.js'
+
 export default {
+  extends: UiHeader,
   computed: {
-    variantClass() {
-      return this.variant ? 'box-' + this.variant : ''
+    typeClass() {
+      return this.type ? 'box-' + this.type : ''
     },
     borderClass() {
       return this.border ? 'with-border' : ''
@@ -44,18 +47,6 @@ export default {
     }
   },
   props: {
-    variant: {
-      type: String,
-      default: undefined
-    },
-    header: {
-      type: String,
-      default: ''
-    },
-    icon: {
-      type: String,
-      default: undefined
-    },
     border: {
       type: Boolean,
       default: true
