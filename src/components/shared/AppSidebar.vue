@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      uiMenu: ['Alert', 'Callout', 'Button', 'Box', 'Carousel'],
+      uiMenu: ['Alert', 'Callout', 'Button', 'Box', 'Progress',  'Carousel'],
       formMenu: ['TextBox', 'ComboBox', 'Radio', 'CheckBox'],
       themeMenu: [{
         type: 'b',

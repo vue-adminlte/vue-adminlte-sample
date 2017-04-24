@@ -3,7 +3,7 @@
        :class="[typeClass,bgClass,solidClass]">
     <div class="box-header"
          :class="[borderClass]">
-      <h3 class="box-title"><i v-if="icon" :class="icon"></i> {{header}}<span style="margin-left:10px;" class="badge" :class="[badgeBgClass]">{{badgeText}}</span></h3>
+      <h3 class="box-title"><i v-if="icon" style="margin-right:5px" :class="icon"></i> {{header}}<span style="margin-left:10px;" class="badge" :class="[badgeBgClass]">{{badgeText}}</span></h3>
       <div class="box-tools pull-right"
            v-show="expandable">
         <button type="button"

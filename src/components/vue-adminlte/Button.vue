@@ -19,7 +19,7 @@ import UiElement from './ui-element.js'
 export default {
   extends: UiElement,
   computed: {
-    typeClass() { return `btn-${this.variant}` },
+    typeClass() { return `btn-${this.type}` },
     sizeClass() { return this.size ? `btn-${this.size}` : '' },
     blockClass() { return this.block ? 'btn-block' : '' },
     flatClass() { return this.flat ? 'btn-flat' : '' },
